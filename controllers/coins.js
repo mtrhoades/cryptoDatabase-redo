@@ -1,11 +1,12 @@
 // IMPORTS/DEPENDENCIES
-const router = require('express').Router()
-
+const express = require('express');
+const router = require('express').Router(); // importing express for the controller and setting to a variable
+const coinDB = require('../models/coin.js')
 
 // INDEX ROUTE ('/coins') (GET, read route)
 router.get('/', (req, res) => {
-    res.send('This is the index of coins list route - /coins')
+    res.render('coins/index')
 });
 
 
-module.exports = router
+module.exports = router;
